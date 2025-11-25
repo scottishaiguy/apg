@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/reviews", label: "Reviews" },
   { href: "/contact", label: "Contact" },
 ];
@@ -28,27 +29,30 @@ export function MobileNav() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <SheetHeader>
-          <SheetTitle className="text-2xl font-bold">
-            <span className="text-[#E53935]">APG</span>
-          </SheetTitle>
+      <SheetContent side="right" className="w-[300px] sm:w-[400px] p-6">
+        <SheetHeader className="pb-6">
+          <div className="flex items-center gap-3">
+            <img src="/APG-logo.svg" alt="APG Logo" className="h-8 w-8" />
+            <SheetTitle className="text-2xl font-bold m-0">
+              <span className="text-apg-red">Ainslie Park Garage</span>
+            </SheetTitle>
+          </div>
         </SheetHeader>
-        <nav className="flex flex-col gap-4 mt-8">
+        <nav className="flex flex-col gap-4 px-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-lg font-medium hover:text-[#E53935] transition-colors"
+              className="text-lg font-medium hover:text-apg-red transition-colors py-2"
             >
               {link.label}
             </Link>
           ))}
-          <div className="flex flex-col gap-3 mt-4">
-            <Button asChild className="w-full bg-[#E53935] hover:bg-[#C62828]">
+          <div className="flex flex-col gap-3 mt-6 px-4">
+            <Button asChild className="w-full bg-apg-red hover:bg-apg-red-dark">
               <Link href="/book">Book a Service</Link>
             </Button>
-            <Button asChild variant="outline" className="w-full border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white">
+            <Button asChild variant="outline" className="w-full border-apg-red text-apg-red hover:bg-apg-red hover:text-white">
               <a href="tel:01311234567">Call Now</a>
             </Button>
           </div>
