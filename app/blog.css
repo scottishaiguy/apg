@@ -1,0 +1,158 @@
+/* Blog-specific styles for proper content rendering */
+
+.blog-content {
+  color: rgb(55 65 81);
+  line-height: 1.625;
+}
+
+.blog-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(17 24 39);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(17 24 39);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(17 24 39);
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content p {
+  margin-bottom: 1rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid rgb(229 57 53);
+  padding-left: 1rem;
+  font-style: italic;
+  color: rgb(75 85 99);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content code {
+  background-color: rgb(243 244 246);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.blog-content pre {
+  background-color: rgb(17 24 39);
+  color: rgb(243 244 246);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.blog-content a {
+  color: rgb(229 57 53);
+  text-decoration: underline;
+}
+
+.blog-content a:hover {
+  color: rgb(198 40 40);
+}
+
+.blog-content strong {
+  font-weight: 700;
+  color: rgb(17 24 39);
+}
+
+.blog-content em {
+  font-style: italic;
+}
+
+.blog-content hr {
+  border-color: rgb(209 213 219);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-content img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content th {
+  border: 1px solid rgb(209 213 219);
+  background-color: rgb(249 250 251);
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.blog-content td {
+  border: 1px solid rgb(209 213 219);
+  padding: 0.5rem 1rem;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 2;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 3;
+}
