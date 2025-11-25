@@ -31,11 +31,8 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[400px] p-6">
         <SheetHeader className="pb-6">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center">
             <img src="/APG-logo.svg" alt="APG Logo" className="h-8 w-8" />
-            <SheetTitle className="text-2xl font-bold m-0">
-              <span className="text-apg-red">Ainslie Park Garage</span>
-            </SheetTitle>
           </div>
         </SheetHeader>
         <nav className="flex flex-col gap-4 px-4">
