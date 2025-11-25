@@ -6,6 +6,7 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/blog-client';
 import { BlogPost } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Calendar, Clock, User, Facebook, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BlogPostCard } from '@/components/blog-post-card';

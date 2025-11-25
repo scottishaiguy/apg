@@ -1,7 +1,6 @@
 import { BlogPostCard } from '@/components/blog-post-card';
 import { BlogPost } from '@/lib/blog';
 import { Container } from '@/components/container';
-import { SectionHeader } from '@/components/section-header';
 
 interface FeaturedPostsProps {
   posts: BlogPost[];
