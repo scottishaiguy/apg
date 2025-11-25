@@ -23,7 +23,7 @@ export default function BlogPage() {
               APG <span className="text-apg-red">Blog</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Expert advice, maintenance tips, and automotive insights from Edinburgh's trusted garage
+              Expert advice, maintenance tips, and automotive insights from Edinburgh&apos;s trusted garage
             </p>
           </div>
         </Container>
@@ -72,7 +72,7 @@ export default function BlogPage() {
               Need Professional Car Care?
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              Get your car serviced by Edinburgh's most trusted mechanics. 
+              Get your car serviced by Edinburgh&apos;s most trusted mechanics. 
               Book online or give us a call today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

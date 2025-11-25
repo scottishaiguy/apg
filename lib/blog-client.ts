@@ -1,4 +1,4 @@
-import { BlogPost, BlogPostFrontmatter } from './blog';
+import { BlogPost } from './blog';
 
 // Sample data for client-side rendering
 const samplePosts: BlogPost[] = [
@@ -6,7 +6,7 @@ const samplePosts: BlogPost[] = [
     title: "Essential Winter Car Maintenance Tips for Edinburgh Drivers",
     excerpt: "Prepare your vehicle for Scottish winter conditions with our comprehensive guide to winter car maintenance.",
     slug: "winter-car-maintenance-edinburgh",
-    publishedAt: "2024-01-15",
+    publishedAt: "25-11-2025",
     author: "APG Team",
     category: "Maintenance Tips",
     tags: ["winter", "maintenance", "scotland", "safety"],
@@ -19,7 +19,7 @@ const samplePosts: BlogPost[] = [
     title: "Complete MOT Preparation Guide: Pass First Time",
     excerpt: "Our expert guide to preparing your vehicle for its MOT test, helping you avoid common failures and pass first time.",
     slug: "mot-preparation-guide-edinburgh",
-    publishedAt: "2024-01-20",
+    publishedAt: "20-11-2025",
     author: "APG Team",
     category: "MOT Preparation",
     tags: ["mot", "preparation", "testing", "safety"],
@@ -32,7 +32,7 @@ const samplePosts: BlogPost[] = [
     title: "Understanding Engine Oil: Complete Guide for Scottish Drivers",
     excerpt: "Learn everything you need to know about engine oil, from choosing the right type to understanding oil change intervals.",
     slug: "engine-oil-guide-scottish-drivers",
-    publishedAt: "2024-02-01",
+    publishedAt: "15-11-2025",
     author: "APG Team",
     category: "Technical Guides",
     tags: ["engine", "oil", "maintenance", "technical"],
@@ -44,7 +44,7 @@ const samplePosts: BlogPost[] = [
     title: "Customer Story: Sarah's Classic Mini Restoration Journey",
     excerpt: "Follow Sarah's emotional journey restoring her late grandfather's 1972 Mini, with help from APG's expert team.",
     slug: "customer-story-mini-restoration-sarah",
-    publishedAt: "2024-02-10",
+    publishedAt: "10-11-2025",
     author: "APG Team",
     category: "Customer Stories",
     tags: ["restoration", "classic-car", "mini", "customer-story"],
@@ -53,13 +53,13 @@ const samplePosts: BlogPost[] = [
     readingTime: 10
   },
   {
-    title: "New UK MOT Changes 2024: What Edinburgh Drivers Need to Know",
+    title: "New UK MOT Changes 2025: What Edinburgh Drivers Need to Know",
     excerpt: "Stay informed about the latest MOT regulation changes and how they affect vehicle testing in Scotland.",
     slug: "uk-mot-changes-2024-edinburgh",
-    publishedAt: "2024-02-15",
+    publishedAt: "05-11-2025",
     author: "APG Team",
     category: "Industry News",
-    tags: ["mot", "regulations", "2024", "uk-changes"],
+    tags: ["mot", "regulations", "2025", "uk-changes"],
     featured: false,
     content: "<p>MOT changes content...</p>",
     readingTime: 7

@@ -6,8 +6,7 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/blog-client';
 import { BlogPost } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Calendar, Clock, User, ArrowRight, Share2, Facebook, Twitter, Mail } from 'lucide-react';
+import { Calendar, Clock, User, Facebook, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BlogPostCard } from '@/components/blog-post-card';
 import { useState, useEffect } from 'react';
@@ -251,7 +250,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               Need Professional Car Care?
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              Get your car serviced by Edinburgh's most trusted mechanics. 
+              Get your car serviced by Edinburgh&apos;s most trusted mechanics. 
               Book online or give us a call today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

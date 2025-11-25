@@ -1,12 +1,10 @@
 import { Container } from '@/components/container';
 import { Breadcrumb } from '@/components/breadcrumb';
 import { BlogPostCard } from '@/components/blog-post-card';
-import { SectionHeader } from '@/components/section-header';
-import { SearchBar } from '@/components/search-bar';
 import { Button } from '@/components/ui/button';
-import { getPostsByCategory, getAllCategories } from '@/lib/blog-utils';
-import { notFound } from 'next/navigation';
+import { getPostsByCategory, getAllCategories } from '@/lib/blog-client';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 interface CategoryPageProps {
   params: {

@@ -1,6 +1,7 @@
-import { getFeaturedPosts } from '@/lib/blog-client';
+import { BlogPostCard } from '@/components/blog-post-card';
 import { BlogPost } from '@/lib/blog';
-import { BlogPostCard } from './blog-post-card';
+import { Container } from '@/components/container';
+import { SectionHeader } from '@/components/section-header';
 
 interface FeaturedPostsProps {
   posts: BlogPost[];
@@ -12,9 +13,9 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
   }
 
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+    <section className="py-20 bg-gray-50">
+      <Container>
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">
             Featured <span className="text-apg-red">Articles</span>
           </h2>
@@ -33,7 +34,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

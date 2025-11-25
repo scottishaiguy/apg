@@ -5,6 +5,7 @@ import { ServiceCard } from "@/components/service-card";
 import { ReviewCard } from "@/components/review-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Wrench,
   ClipboardCheck,
@@ -13,6 +14,42 @@ import {
   Settings,
   Battery,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Ainslie Park Garage | Trusted Auto Repair Edinburgh",
+  description: "Professional car servicing, MOT testing, and repairs in Edinburgh since 1975. Expert mechanics, competitive prices, and trusted service. Book your appointment today!",
+  keywords: [
+    "car repair Edinburgh",
+    "MOT testing Edinburgh", 
+    "car servicing Edinburgh",
+    "auto repair Edinburgh",
+    "garage Edinburgh",
+    "vehicle maintenance Edinburgh",
+    "brake repair Edinburgh",
+    "exhaust repair Edinburgh",
+    "clutch repair Edinburgh",
+    "engine diagnostics Edinburgh"
+  ],
+  openGraph: {
+    title: "Ainslie Park Garage | Trusted Auto Repair Edinburgh",
+    description: "Professional car servicing, MOT testing, and repairs in Edinburgh since 1975. Expert mechanics, competitive prices, and trusted service.",
+    url: "https://ainslieparkgarage.com",
+    images: [
+      {
+        url: "/hero-workshop.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ainslie Park Garage - Professional Auto Repair in Edinburgh",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ainslie Park Garage | Trusted Auto Repair Edinburgh",
+    description: "Professional car servicing, MOT testing, and repairs in Edinburgh since 1975. Book your appointment today!",
+    images: ["/hero-workshop.jpg"],
+  },
+};
 
 const services = [
   {
@@ -78,8 +115,75 @@ const reviews = [
 ];
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Ainslie Park Garage",
+    description: "Professional car servicing, MOT testing, and repairs in Edinburgh since 1975",
+    image: "https://ainslieparkgarage.com/hero-workshop.jpg",
+    url: "https://ainslieparkgarage.com",
+    telephone: "0131 123 4567",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Ainslie Park Garage",
+      addressLocality: "Edinburgh",
+      addressRegion: "Scotland",
+      postalCode: "EH5 2HF",
+      addressCountry: "GB"
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 55.9765,
+      longitude: -3.2055
+    },
+    openingHours: [
+      "Mo-Fr 08:00-18:00",
+      "Sa 09:00-16:00",
+      "Su Closed"
+    ],
+    priceRange: "££",
+    paymentAccepted: "Cash, Credit Card, Debit Card",
+    currenciesAccepted: "GBP",
+    sameAs: [
+      "https://www.facebook.com/ainslieparkgarage",
+      "https://www.twitter.com/ainslieparkgarage"
+    ],
+    servicesOffered: [
+      {
+        "@type": "Service",
+        name: "Car Servicing",
+        description: "Comprehensive vehicle servicing and maintenance"
+      },
+      {
+        "@type": "Service", 
+        name: "MOT Testing",
+        description: "Official MOT testing centre"
+      },
+      {
+        "@type": "Service",
+        name: "Brake Repair",
+        description: "Professional brake repair and replacement"
+      },
+      {
+        "@type": "Service",
+        name: "Engine Diagnostics",
+        description: "Advanced engine diagnostics and repair"
+      }
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "127",
+      bestRating: "5"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <Hero />
 
@@ -105,7 +209,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Trusted by Edinburgh motorists{" "}
-                <span className="text-[#E53935]">since 1975</span>
+                <span className="text-apg-red">since 1975</span>
               </h2>
               <p className="text-lg text-gray-700 mb-4">
                 For nearly five decades, Ainslie Park Garage has been
@@ -121,7 +225,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#E53935] hover:bg-[#C62828]"
+                className="w-full bg-apg-red hover:bg-apg-red-dark text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 <Link href="/about">Learn More About Us</Link>
               </Button>
@@ -158,7 +262,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white"
+              className="text-apg-red text-sm font-medium border-apg-red hover:bg-apg-red hover:text-white"
             >
               <Link href="/reviews">View All Reviews</Link>
             </Button>
@@ -167,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#E53935] text-white">
+      <section className="py-20 bg-apg-red text-white">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -182,7 +286,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-white text-[#E53935] border-white hover:bg-gray-100 text-lg px-8"
+                className="bg-white text-apg-red border-white hover:bg-gray-100 text-lg px-8"
               >
                 <Link href="/book">Book Online</Link>
               </Button>
@@ -190,7 +294,7 @@ export default function Home() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-white border-2 border-white text-[#E53935] hover:bg-gray-100 text-lg px-8"
+                className="bg-white border-2 border-white text-apg-red hover:bg-gray-100 text-lg px-8"
               >
                 <a href="tel:01311234567">Call 0131 123 4567</a>
               </Button>
